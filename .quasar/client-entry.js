@@ -44,10 +44,10 @@ import quasarUserOptions from './quasar-user-options.js'
 
 
 
-console.info('[Quasar] Running ELECTRON.')
+console.info('[Quasar] Running SPA.')
 
 
-const publicPath = ``
+const publicPath = `/`
 
 async function start ({
   app,
@@ -152,7 +152,13 @@ createQuasarApp(createApp, quasarUserOptions)
 
     return Promise[ method ]([
       
-      import('boot/axios')
+      import('boot/database'),
+      
+      import('boot/components'),
+      
+      import('boot/axios'),
+      
+      import('boot/syncfusion-license')
       
     ]).then(bootFiles => {
       const boot = mapFn(bootFiles).filter(entry => typeof entry === 'function')

@@ -1,15 +1,13 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view='hHh Lpr lff'>
+    <q-header bordered>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn aria-label='Menu'
+               dense
+               flat
+               icon='menu'
+               round
+               @click='toggleLeftDrawer' />
 
         <q-toolbar-title>
           Quasar App
@@ -19,11 +17,16 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+
+    <q-drawer v-model='leftDrawerOpen'
+              bordered
+              content-class='bg-grey-1'
+              :mini='miniState'
+              mini-to-overlay
+              show-if-above
+              :width='260'
+              @mouseout='miniState = true'
+              @mouseover='miniState = false'>
       <q-list>
         <q-item-label
           header
@@ -32,9 +35,9 @@
         </q-item-label>
 
         <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
+          v-for='link in linksList'
+          :key='link.title'
+          v-bind='link'
         />
       </q-list>
     </q-drawer>
@@ -46,8 +49,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue';
+import { defineComponent } from 'vue'
+import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue'
 
 const linksList: EssentialLinkProps[] = [
   {
@@ -92,7 +95,7 @@ const linksList: EssentialLinkProps[] = [
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
   }
-];
+]
 
 export default defineComponent({
   name: 'MainLayout',
@@ -101,17 +104,18 @@ export default defineComponent({
     EssentialLink
   },
 
-  data () {
+  data() {
     return {
+      miniState: true,
       linksList,
       leftDrawerOpen: false
     }
   },
 
   methods: {
-    toggleLeftDrawer () {
-      this.leftDrawerOpen = !this.leftDrawerOpen;
+    toggleLeftDrawer() {
+      this.leftDrawerOpen = !this.leftDrawerOpen
     }
   }
-});
+})
 </script>

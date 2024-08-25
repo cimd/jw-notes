@@ -2,7 +2,7 @@
   <div>
     <p>{{ title }}</p>
     <ul>
-      <li v-for="todo in todos" :key="todo.id" @click="increment">
+      <li v-for='todo in todos' :key='todo.id' @click='increment'>
         {{ todo.id }} - {{ todo.content }}
       </li>
     </ul>
@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { Todo, Meta } from './models';
+import { defineComponent, PropType } from 'vue'
+import { Meta, Todo } from './models'
 
 export default defineComponent({
   name: 'ExampleComponent',
@@ -40,19 +40,19 @@ export default defineComponent({
   data(): { clickCount: number } {
     return {
       clickCount: 0
-    };
-  },
-
-  methods: {
-    increment (): void {
-      this.clickCount += 1;
     }
   },
 
   computed: {
-    todoCount (): number {
-      return this.todos.length;
+    todoCount(): number {
+      return this.todos.length
+    }
+  },
+
+  methods: {
+    increment(): void {
+      this.clickCount += 1
     }
   }
-});
+})
 </script>
