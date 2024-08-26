@@ -24,7 +24,8 @@ module.exports = configure(function (/* ctx */) {
     boot: [
       'database',
       'components',
-      'axios',
+      'apis',
+      'middleware',
       'syncfusion-license',
     ],
 

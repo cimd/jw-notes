@@ -11,16 +11,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Meta, Todo } from 'components/models'
+import { Meta, Todo } from 'src/components/models'
 import ExampleComponent from 'components/ExampleComponent.vue'
 
 export default defineComponent({
-  name: 'IndexPage',
-
   components: {
     ExampleComponent
   },
-
   data() {
     const todos: Todo[] = [
       {

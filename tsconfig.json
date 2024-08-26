@@ -15,7 +15,11 @@
         "src/boot/*"
       ]
     },
-    "baseUrl": "."
+    "baseUrl": ".",
+    "sourceMap": false,
+    "lib": [
+      "esnext",
+    ]
   },
   "exclude": [
     "./dist",

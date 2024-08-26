@@ -50,9 +50,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue'
+import EssentialLink from 'components/EssentialLink.vue'
 
-const linksList: EssentialLinkProps[] = [
+const linksList = [
   {
     title: 'Docs',
     caption: 'quasar.dev',
@@ -98,12 +98,9 @@ const linksList: EssentialLinkProps[] = [
 ]
 
 export default defineComponent({
-  name: 'MainLayout',
-
   components: {
     EssentialLink
   },
-
   data() {
     return {
       miniState: true,

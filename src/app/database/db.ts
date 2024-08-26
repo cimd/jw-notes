@@ -1,6 +1,6 @@
 // db.ts
 import Dexie, { Table } from 'dexie'
-import { IUser } from 'modules/Auth/Models/UserInterface'
+import { IUser } from 'modules/Auth/models/UserInterface'
 import { INote } from 'modules/Notes/Models/NoteInterface'
 
 export class dexieDb extends Dexie {

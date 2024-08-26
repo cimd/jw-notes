@@ -156,7 +156,9 @@ createQuasarApp(createApp, quasarUserOptions)
       
       import('boot/components'),
       
-      import('boot/axios'),
+      import('boot/apis'),
+      
+      import('boot/middleware'),
       
       import('boot/syncfusion-license')
       
