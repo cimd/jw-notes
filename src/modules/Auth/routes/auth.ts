@@ -4,7 +4,7 @@ const authRoutes: RouteRecordRaw[] = [
   {
     path: 'login',
     name: 'login',
-    component: () => import('src/modules/Auth/pages/LoginPage.vue'),
+    component: () => import('modules/Auth/pages/LoginPage.vue'),
     meta: {
       title: 'Login',
       requiresAuth: false,
@@ -12,7 +12,7 @@ const authRoutes: RouteRecordRaw[] = [
   },
   {
     path: 'forgot-password',
-    component: () => import('src/modules/Auth/pages/ForgotPassword.vue'),
+    component: () => import('modules/Auth/pages/ForgotPassword.vue'),
     meta: {
       title: 'Recover Password',
       requiresAuth: false,
@@ -20,7 +20,7 @@ const authRoutes: RouteRecordRaw[] = [
   },
   {
     path: 'password-reset/:email/:token',
-    component: () => import('src/modules/Auth/pages/PasswordReset.vue'),
+    component: () => import('modules/Auth/pages/PasswordReset.vue'),
     meta: {
       title: 'Password Reset',
       requiresAuth: false,

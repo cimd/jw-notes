@@ -1,6 +1,6 @@
 import { RouteRecordRaw } from 'vue-router'
-import authRoutes from 'src/modules/Auth/routes/auth'
-import userRoutes from 'src/modules/Auth/routes/user'
+import authRoutes from 'modules/Auth/routes/auth'
+import userRoutes from 'modules/Auth/routes/user'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -8,9 +8,16 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
   },
-
-  ...authRoutes,
-  ...userRoutes,
+  {
+    path: '/user',
+    component: () => import('layouts/BlankLayout.vue'),
+    children: userRoutes,
+  },
+  {
+    path: '/auth',
+    component: () => import('layouts/AuthLayout.vue'),
+    children: authRoutes,
+  },
 
   // Always leave this as last one,
   // but you can also remove it

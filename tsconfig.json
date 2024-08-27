@@ -4,22 +4,24 @@
     "paths": {
       "modules/*": [
         "src/modules/*"
+      ],
+      "layouts/*": [
+        "src/layouts/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "boot/*": [
+        "src/boot/*"
       ]
     },
     "baseUrl": ".",
     "sourceMap": false,
+    "types": ["cypress", "node", "cypress-real-events", "@types/lodash", "cypress-terminal-report"],
     "lib": [
       "esnext",
-    ]
-  },
-  "exclude": [
-    "./dist",
-    "./.quasar",
-    "./node_modules",
-    "/home/aquinch/Documents/GitHub/vue-eloquent/*",
-    "node_modules",
-    "./src-capacitor",
-    "./src-cordova",
-    "./quasar.config.*.temporary.compiled*"
-  ]
+      "dom",
+      "dom.iterable",
+    ],
+  }
 }
