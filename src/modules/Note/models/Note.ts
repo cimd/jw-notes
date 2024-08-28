@@ -1,8 +1,8 @@
 import { Model } from '@konnec/vue-eloquent'
 import { required } from '@vuelidate/validators'
 import { computed, reactive } from 'vue'
-import { INote } from 'modules/Notes/Models/NoteInterface'
-import NoteApi from 'modules/Notes/Models/NoteApi'
+import { INote } from 'modules/Note/models/NoteInterface'
+import NoteApi from 'modules/Note/models/NoteApi'
 
 export default class Note extends Model<INote> {
   api = NoteApi

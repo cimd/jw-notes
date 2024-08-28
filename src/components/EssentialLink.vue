@@ -1,14 +1,8 @@
 <template>
-  <q-item
-    clickable
-    :href='link'
-    tag='a'
-    target='_blank'
-  >
-    <q-item-section
-      v-if='icon'
-      avatar
-    >
+  <q-item clickable
+          :to='link'>
+    <q-item-section v-if='icon'
+                    avatar>
       <q-icon :name='icon' />
     </q-item-section>
 
@@ -27,7 +21,7 @@ export interface EssentialLinkProps {
   caption?: string;
   link?: string;
   icon?: string;
-};
+}
 
 export default defineComponent({
   name: 'EssentialLink',

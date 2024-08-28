@@ -17,11 +17,9 @@
 </template>
 
 <script lang="ts">
-import FormField from 'modules/Application/mixins/FormField'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  mixins: [FormField],
   props: {
     value: {
       required: true

@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from 'vue-router'
 import authRoutes from 'modules/Auth/routes/auth'
 import userRoutes from 'modules/Auth/routes/user'
+import noteRoutes from 'modules/Note/Routes/note'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -12,7 +13,8 @@ const routes: RouteRecordRaw[] = [
         meta: {
           requiresAuth: true,
         }
-      }
+      },
+      ...noteRoutes
     ],
   },
   {

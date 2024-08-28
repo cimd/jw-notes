@@ -53,7 +53,7 @@ const linksList = [
   {
     title: 'Notes',
     icon: 'code',
-    link: '/notes'
+    link: '/notes/grid'
   },
 ]
 
