@@ -8,6 +8,7 @@ export default boot(({ router }) => {
   router.beforeEach((to: any, from: any, next: any) => {
     // documentTitle(to)
     // pageTitle(to)
+    console.log(auth.isAuthenticated())
 
     if (to.matched.some((record: any) => record.meta.requiresAuth)) {
       if (auth.isAuthenticated()) {

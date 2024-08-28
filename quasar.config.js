@@ -38,7 +38,10 @@ module.exports = configure(function (/* ctx */) {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: [
-      'app.scss'
+      'app.scss',
+      'quasar-overrides.scss',
+      'syncfusion.material.min.css',
+      'grid.scss',
     ],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
@@ -99,7 +102,8 @@ module.exports = configure(function (/* ctx */) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
       // https: true
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
+      port: 9090
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework

@@ -1,0 +1,1 @@
+{"theme":"material","properties":{"$primary":"rgba(156,39,176,1)","$primary-font":"#fff","$accent":"rgba(49,204,236,1)","$accent-font":"#fff"},"components":["grid","pivotview","treegrid","gantt","dashboard-layout","context-menu","kanban"]}

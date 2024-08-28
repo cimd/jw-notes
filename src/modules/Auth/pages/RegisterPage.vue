@@ -19,34 +19,6 @@
                          name='name'
                          outlined />
 
-                <q-input ref='username'
-                         v-model='user.model.username'
-                         :error='user.$model.username.$error'
-                         :error-message='user.$model.username.$errors[0]?.$message'
-                         label='SAP Username'
-                         name='username'
-                         outlined />
-
-                <my-location ref='location_id'
-                             v-model='user.model.location_id'
-                             all-countries
-                             :error='user.$model.location_id.$error'
-                             error-message='Required'
-                             label='Location'
-                             name='location_id' />
-
-                <q-select ref='department_id'
-                          v-model='user.model.department_id'
-                          emit-value
-                          :error='user.$model.department_id.$error'
-                          error-message='Required'
-                          label='Department'
-                          map-options
-                          name='department_id'
-                          option-label='name'
-                          option-value='id'
-                          :options='departments'
-                          outlined />
 
                 <q-input ref='email'
                          v-model='user.model.email'
@@ -104,9 +76,7 @@
 </template>
 
 <script lang="ts">
-import { mapState } from 'pinia'
-import { useDepartmentStore } from 'modules/Config/stores/Department'
-import User from 'modules/Application/models/User/User'
+import User from 'modules/Auth/models/User'
 import { defineComponent } from 'vue'
 import { AxiosError } from 'axios'
 
@@ -123,15 +93,13 @@ export default defineComponent({
       errorMessage: ''
     }
   },
-  computed: {
-    ...mapState(useDepartmentStore, ['departments'])
-  },
   methods: {
     onBack() {
       this.$router.go(-1)
     },
     async submitForm() {
       this.user.$validate()
+      console.log(this.user.$model)
       if (this.user.$invalid) return
 
       try {

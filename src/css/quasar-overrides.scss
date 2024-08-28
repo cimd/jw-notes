@@ -1,0 +1,9 @@
+.q-field--outlined.q-field--readonly .q-field__control::before {
+  opacity: 0.5;
+  //background: $sps-primary-50;
+  border: 1px solid $sps-primary-100;
+}
+
+.q-tab.q-tab--active {
+  background-color: $sps-primary-50;
+}

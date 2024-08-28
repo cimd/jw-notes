@@ -1,0 +1,49 @@
+@import '@syncfusion/ej2-layouts/styles/material.css';
+@import "@syncfusion/ej2-vue-gantt/styles/material.css";
+
+//.e-gantt .e-gantt-chart .e-connectorpoint-right {
+//  top: -20px;
+//}
+
+// Schedule
+.new:before {
+  content: "\e7f9";
+}
+
+.batch-edit:before {
+  content: "\ec26";
+}
+
+.time-off:before {
+  content: "\e31d";
+}
+
+.quarantine:before {
+  content: "\e30c";
+}
+
+.validate:before {
+  content: "\ea84";
+}
+
+.resave:before {
+  content: "\e308";
+}
+
+.resavecalloff:before {
+  content: "\e735";
+}
+
+.add-above:before {
+  /* color: #00ffff; */
+  content: "\e658";
+}
+.add-below:before {
+  content: "\e659";
+}
+.add-copy:before {
+  content: "\e4a4";
+}
+.add-child:before {
+  content: "\e19c";
+}

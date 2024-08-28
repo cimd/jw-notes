@@ -1,0 +1,37 @@
+@import '@syncfusion/ej2-layouts/styles/material.css';
+@import "@syncfusion/ej2-vue-kanban/styles/material.css";
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card {
+  background-color: #fff;
+  border: 1px solid $sps-grey-300;
+  box-shadow: 0px 1px 2px 0px $sps-grey-300;
+  margin-bottom: 12px;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card :hover {
+  background-color: $sps-grey-200;
+}
+
+.e-card.e-template.e-droppable.e-lib.e-draggable.e-selection {
+  background-color: $sps-grey-200;
+}
+
+.e-move::before {
+  content: '\e300';
+}
+
+.e-copy::before {
+  content: '\e70a';
+}
+
+.e-delete::before {
+  content: '\e84e';
+}
+
+.e-fso::before {
+  content: '\e527';
+}
+
+.e-changes::before {
+  content: '\e99a';
+}
