@@ -3,6 +3,7 @@ import { required } from '@vuelidate/validators'
 import { computed, reactive } from 'vue'
 import { INote } from 'modules/Note/models/NoteInterface'
 import NoteApi from 'modules/Note/models/NoteApi'
+import { useAuthStore } from 'modules/Auth/stores/Auth'
 
 export default class Note extends Model<INote> {
   api = NoteApi
@@ -11,6 +12,7 @@ export default class Note extends Model<INote> {
     created_at: undefined,
     updated_at: undefined,
     deleted_at: undefined,
+    user_id: useAuthStore().user.id,
     type: undefined,
     meeting_at: undefined,
     keywords: [],
@@ -21,6 +23,7 @@ export default class Note extends Model<INote> {
     super()
     this.factory(note)
     super.initValidations()
+    console.log(useAuthStore().user.id)
   }
 
   protected validations = computed(() => ({

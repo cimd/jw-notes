@@ -12,9 +12,6 @@
     :type='type'
     @update:model-value="$emit('update:value', $event)"
   >
-    <template v-if='hasHint' v-slot:append>
-      <my-hint-button :id='label' />
-    </template>
   </q-input>
 </template>
 
@@ -61,11 +58,6 @@ export default defineComponent({
       required: false,
       type: String
     },
-    hasHint: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
   },
   data() {
     return {

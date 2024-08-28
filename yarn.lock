@@ -205,6 +205,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/object-schema/-/object-schema-2.1.4.tgz#9e69f8bb4031e11df79e03db09f9dbbae1740843"
   integrity sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==
 
+"@fortawesome/fontawesome-pro@^6.6.0":
+  version "6.6.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/6.6.0/fontawesome-pro-6.6.0.tgz#be3e1f5745b94077b361204bd3d1bae2ab127334"
+  integrity sha512-I1Fp+yiUYrK0q0UMoO0o9ZEGa0CWhqr0UibM/gcrKl40uYUkVmSemQJPV8+uOJgo4dnOHnTOqIL0r6kcH2hZlQ==
+
 "@humanwhocodes/module-importer@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz#af5b2691a22b44be847b0ca81641c5fb6ad0172c"
@@ -484,6 +489,19 @@
     "@syncfusion/ej2-lists" "~26.2.11"
     "@syncfusion/ej2-popups" "~26.2.11"
 
+"@syncfusion/ej2-charts@~26.2.11":
+  version "26.2.11"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-charts/-/ej2-charts-26.2.11.tgz#c644faa1d1402a193d4c8997732ca9fb19450d88"
+  integrity sha512-wOnvaQM1d0poTWv9/agYulek5rZUc/3Ko1pXB8gCd/TsOJ5X/aoehYqWZHh90kEyfORAoeJDHt62RfRBNZ7Ehw==
+  dependencies:
+    "@syncfusion/ej2-base" "~26.2.10"
+    "@syncfusion/ej2-calendars" "~26.2.11"
+    "@syncfusion/ej2-data" "~26.2.10"
+    "@syncfusion/ej2-excel-export" "~26.2.11"
+    "@syncfusion/ej2-navigations" "~26.2.11"
+    "@syncfusion/ej2-pdf-export" "~26.2.11"
+    "@syncfusion/ej2-svg-base" "~26.2.10"
+
 "@syncfusion/ej2-compression@~26.2.10":
   version "26.2.10"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-compression/-/ej2-compression-26.2.10.tgz#56a0309e676fa1619c371b2fac66256616793b04"
@@ -621,6 +639,29 @@
   dependencies:
     "@syncfusion/ej2-compression" "~26.2.10"
 
+"@syncfusion/ej2-pivotview@26.2.11":
+  version "26.2.11"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-pivotview/-/ej2-pivotview-26.2.11.tgz#62c1c36948fb687d3ee4faf2c859c7e9c5bc1a27"
+  integrity sha512-RmCoo/3/ZdK09iRGJapdG37rUZR9qEH317U4BR2HLMshQmWDkS13oxQjS06gTfQQbsCIEB4sCPe4RJGyGY2jvw==
+  dependencies:
+    "@syncfusion/ej2-base" "~26.2.10"
+    "@syncfusion/ej2-buttons" "~26.2.10"
+    "@syncfusion/ej2-calendars" "~26.2.11"
+    "@syncfusion/ej2-charts" "~26.2.11"
+    "@syncfusion/ej2-compression" "~26.2.10"
+    "@syncfusion/ej2-data" "~26.2.10"
+    "@syncfusion/ej2-dropdowns" "~26.2.11"
+    "@syncfusion/ej2-excel-export" "~26.2.11"
+    "@syncfusion/ej2-file-utils" "~26.2.10"
+    "@syncfusion/ej2-grids" "~26.2.11"
+    "@syncfusion/ej2-inputs" "~26.2.11"
+    "@syncfusion/ej2-lists" "~26.2.11"
+    "@syncfusion/ej2-navigations" "~26.2.11"
+    "@syncfusion/ej2-pdf-export" "~26.2.11"
+    "@syncfusion/ej2-popups" "~26.2.11"
+    "@syncfusion/ej2-splitbuttons" "~26.2.10"
+    "@syncfusion/ej2-svg-base" "~26.2.10"
+
 "@syncfusion/ej2-popups@~26.2.10", "@syncfusion/ej2-popups@~26.2.11":
   version "26.2.11"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-popups/-/ej2-popups-26.2.11.tgz#767fd6ddd3f743e0d7b4dc340725090c6ce582de"
@@ -650,6 +691,13 @@
     "@syncfusion/ej2-base" "~26.2.10"
     "@syncfusion/ej2-popups" "~26.2.10"
 
+"@syncfusion/ej2-svg-base@~26.2.10":
+  version "26.2.10"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-svg-base/-/ej2-svg-base-26.2.10.tgz#e5dcf6831f995c3853204b843fd2c360fbb9a5f2"
+  integrity sha512-BbUzgsRKFzq/UagxMapGfarKpymeSdOOAPBtPDv0IqQ0sf5BmZGy41bQ+1TqABC2zVXqxvSDqai8OedWrhb5/w==
+  dependencies:
+    "@syncfusion/ej2-base" "~26.2.10"
+
 "@syncfusion/ej2-vue-base@~26.2.10":
   version "26.2.10"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-vue-base/-/ej2-vue-base-26.2.10.tgz#2a47f9d124024316b8622597082415133b204624"
@@ -664,6 +712,15 @@
   dependencies:
     "@syncfusion/ej2-base" "~26.2.10"
     "@syncfusion/ej2-grids" "26.2.11"
+    "@syncfusion/ej2-vue-base" "~26.2.10"
+
+"@syncfusion/ej2-vue-pivotview@^26.2.11":
+  version "26.2.11"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-vue-pivotview/-/ej2-vue-pivotview-26.2.11.tgz#5b0460306d87d40467c31d65ef75ee9f2d469c09"
+  integrity sha512-EBFsq7yxA2fIcaMwhWZK1+F1lc+trVJmcBH5EPhQjd8RpJI5ccY1Dn+HVI2bBrcwCEExFqVZk+Uz/tLRfwXFXA==
+  dependencies:
+    "@syncfusion/ej2-base" "~26.2.10"
+    "@syncfusion/ej2-pivotview" "26.2.11"
     "@syncfusion/ej2-vue-base" "~26.2.10"
 
 "@syncfusion/ej2-vue-richtexteditor@^26.2.10":

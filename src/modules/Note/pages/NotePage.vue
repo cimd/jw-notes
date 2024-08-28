@@ -2,6 +2,12 @@
   <q-page padding>
 
     <q-form @submit='onSubmit'>
+      <div class='row'>
+        <my-select v-model:value='note.model.type' label='Type' :map-options='false' :options='types' />
+        <my-date v-model:value='note.model.meeting_at' label='Date' />
+        <my-multi-input v-model:value='note.model.keywords' label='Keywords' />
+        <my-input v-model:value='note.model.notes' label='Notes' />
+      </div>
       <my-action-footer>
         <q-space />
         <my-cancel-button @click="$router.push({name:'NotesGrid'})" />
@@ -15,6 +21,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Note from 'modules/Note/models/Note'
+import { useNoteStore } from 'modules/Note/stores/Note'
+import { mapState } from 'pinia'
 
 export default defineComponent({
   components: {
@@ -30,6 +38,7 @@ export default defineComponent({
     }
   },
   computed: {
+    ...mapState(useNoteStore, ['types'])
   },
   created() {
     if (this.noteId) {
@@ -39,6 +48,11 @@ export default defineComponent({
   },
   methods: {
     onSubmit() {
+      if (!this.note.$validate()) return
+
+      this.note.save().then(() => {
+        this.$router.push({ name: 'NotesGrid' })
+      })
     },
   },
 })

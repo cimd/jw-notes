@@ -31,12 +31,14 @@ export default class UserApi extends Api {
 
   protected retrieved(response: { data: IUser })
   {
+    console.log(response)
     const store = useAuthStore()
     store.user = response.data
   }
 
   protected stored(response: { data: IUser, token: string })
   {
+    console.log(response)
     const store = useAuthStore()
     store.user = response.data
     auth.token = response.token
@@ -44,6 +46,7 @@ export default class UserApi extends Api {
 
   protected updated(response: { data: IUser })
   {
+    console.log(response)
     const store = useAuthStore()
     store.user = response.data
   }

@@ -1,6 +1,5 @@
-import { Model } from '../../../../../vue-eloquent'
-import { email, helpers, maxLength, minLength, required, sameAs } from '@vuelidate/validators'
-import { mustBeInternalEmail } from 'modules/Application/models/User/AuthValidators'
+import { Model } from '@konnec/vue-eloquent'
+import { email, minLength, required, sameAs } from '@vuelidate/validators'
 import UserApi from 'modules/Auth/models/UserApi'
 import { IUser } from 'modules/Auth/models/UserInterface'
 import { computed, reactive } from 'vue'

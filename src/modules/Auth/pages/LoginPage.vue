@@ -46,6 +46,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { auth } from 'boot/apis'
+import { ApiResponse } from '@konnec/vue-eloquent'
+import { IUser } from 'modules/Auth/models/UserInterface'
+import { useAuthStore } from 'modules/Auth/stores/Auth'
 
 export default defineComponent({
   data() {
@@ -68,7 +71,9 @@ export default defineComponent({
         this.loading = true
         this.loginError = false
         auth.login(this.formData)
-          .then(() => {
+          .then((response: ApiResponse<IUser>) => {
+            const store = useAuthStore()
+            store.user = response.data
             this.$router.push({ path: '/' })
           })
           .catch(() => {
