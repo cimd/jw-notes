@@ -55,7 +55,9 @@ module.exports = configure(function (/* ctx */) {
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
       'roboto-font', // optional, you are not bound to it
-      'material-icons', // optional, you are not bound to it
+      // 'material-icons', // optional, you are not bound to it
+      'material-symbols-outlined',
+      'material-symbols-sharp',
     ],
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
@@ -103,7 +105,7 @@ module.exports = configure(function (/* ctx */) {
     devServer: {
       // https: true
       open: true, // opens browser window automatically
-      port: 9090
+      port: 9090,
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework

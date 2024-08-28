@@ -5,10 +5,10 @@
       <q-form ref='loginForm' @submit.prevent='submitForm'>
         <div class='q-pa-md'>
           <div class='q-gutter-y-md column' style='max-width: 300px'>
-            <q-input ref='username'
-                     v-model='formData.username'
-                     label='Username'
-                     name='username'
+            <q-input ref='email'
+                     v-model='formData.email'
+                     label='Email'
+                     name='email'
                      outlined
                      :rules="[(val) => !!val || 'Required']" />
             <q-input ref='password'
@@ -52,7 +52,7 @@ export default defineComponent({
     return {
       open: true,
       formData: {
-        username: '',
+        email: '',
         password: ''
       },
       loading: false,
@@ -62,7 +62,7 @@ export default defineComponent({
   },
   methods: {
     submitForm() {
-      const userValidation = this.$refs.username.hasError
+      const userValidation = this.$refs.email.hasError
       const passValidation = this.$refs.password.hasError
       if (!userValidation && !passValidation) {
         this.loading = true

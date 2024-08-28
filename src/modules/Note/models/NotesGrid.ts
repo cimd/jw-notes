@@ -5,7 +5,7 @@ import { INote } from 'modules/Note/models/NoteInterface'
 
 export default class NotesGrid extends Collection<INote> {
   api = NoteApi
-  $grid: DataGrid
+  $grid: DataGrid<INote>
 
   constructor() {
     super()

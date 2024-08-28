@@ -5,7 +5,7 @@
         <q-btn aria-label='Menu'
                dense
                flat
-               icon='menu'
+               icon='sym_o_menu'
                round
                @click='toggleLeftDrawer' />
 
@@ -16,7 +16,6 @@
         <div>v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
-
 
     <q-drawer v-model='leftDrawerOpen'
               bordered
@@ -47,12 +46,12 @@ import EssentialLink from 'components/EssentialLink.vue'
 const linksList = [
   {
     title: 'Home',
-    icon: 'home',
+    icon: 'sym_o_home',
     link: '/'
   },
   {
     title: 'Notes',
-    icon: 'code',
+    icon: 'sym_o_note',
     link: '/notes/grid'
   },
 ]

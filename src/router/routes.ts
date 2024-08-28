@@ -1,7 +1,7 @@
 import { RouteRecordRaw } from 'vue-router'
 import authRoutes from 'modules/Auth/routes/auth'
 import userRoutes from 'modules/Auth/routes/user'
-import noteRoutes from 'modules/Note/Routes/note'
+import noteRoutes from 'modules/Note/routes/note'
 
 const routes: RouteRecordRaw[] = [
   {
