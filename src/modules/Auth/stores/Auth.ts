@@ -12,7 +12,6 @@ export const useAuthStore = defineStore('Auth', {
       name: undefined,
       email: undefined,
       password: undefined,
-      token: undefined,
     },
   }),
   actions: {

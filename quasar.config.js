@@ -33,6 +33,7 @@ module.exports = configure(function (/* ctx */) {
       'components',
       'apis',
       'middleware',
+      'config',
       'syncfusion-license',
       'fontawesome-pro'
     ],

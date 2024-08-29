@@ -85,6 +85,10 @@ export default defineComponent({
       return this.$q.screen.height - 350 + 'px'
     },
   },
+  created() {
+    console.log(this.$config)
+    this.notes.where({ user_id: this.$config.user.id }).get()
+  },
   mounted() {
     this.notes.$grid.init()
   },

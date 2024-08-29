@@ -23,7 +23,6 @@ export default class Note extends Model<INote> {
     super()
     this.factory(note)
     super.initValidations()
-    console.log(useAuthStore().user.id)
   }
 
   protected validations = computed(() => ({

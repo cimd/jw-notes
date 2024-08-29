@@ -8,3 +8,11 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
+
+declare module '@vue/runtime-core' {
+  import { IUser } from 'modules/Auth/models/UserInterface';
+
+  interface ComponentCustomProperties {
+    $config: { user: IUser }
+  }
+}

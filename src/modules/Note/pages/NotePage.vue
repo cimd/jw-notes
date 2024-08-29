@@ -3,15 +3,24 @@
 
     <q-form @submit='onSubmit'>
       <div class='row'>
-        <my-select v-model:value='note.model.type' label='Type' :map-options='false' :options='types' />
-        <my-date v-model:value='note.model.meeting_at' label='Date' />
-        <my-multi-input v-model:value='note.model.keywords' label='Keywords' />
-        <my-input v-model:value='note.model.notes' label='Notes' />
+        <my-select v-model:value='note.model.type'
+                   :error='note.$model.type.$error'
+                   label='Type'
+                   :map-options='false'
+                   :options='types' />
+        <my-date v-model:value='note.model.meeting_at'
+                 :error='note.$model.meeting_at.$error'
+                 label='Date' />
+        <my-multi-input v-model:value='note.model.keywords'
+                        label='Keywords' />
+        <my-input v-model:value='note.model.notes'
+                  :error='note.$model.notes.$error'
+                  label='Notes' />
       </div>
       <my-action-footer>
         <q-space />
         <my-cancel-button @click="$router.push({name:'NotesGrid'})" />
-        <my-save-button :loading='note.state.isLoading' />
+        <my-save-button :loading='note.state.isLoading' type='submit' />
       </my-action-footer>
     </q-form>
 
@@ -47,9 +56,11 @@ export default defineComponent({
     this.note.initValidations()
   },
   methods: {
-    onSubmit() {
-      if (!this.note.$validate()) return
-
+    onSubmit(args) {
+      console.log(args)
+      this.note.$validate()
+      if (this.note.$invalid) return
+      console.log('Form submitted')
       this.note.save().then(() => {
         this.$router.push({ name: 'NotesGrid' })
       })
