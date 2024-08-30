@@ -60,9 +60,7 @@ const MyEditButton = defineAsyncComponent(() =>
 const MyCancelButton = defineAsyncComponent(() =>
   import('components/Buttons/CancelButton.vue')
 )
-const MyDeleteButton = defineAsyncComponent(() =>
-  import('components/Buttons/DeleteButton.vue')
-)
+
 
 // "async" is optional;
 // more info on params: https://quasar.dev/quasar-cli/boot-files
@@ -94,5 +92,4 @@ export default boot(({ app }) => {
   app.component('MySaveButton', MySaveButton)
   app.component('MyEditButton', MyEditButton)
   app.component('MyCancelButton', MyCancelButton)
-  app.component('MyDeleteButton', MyDeleteButton)
 })

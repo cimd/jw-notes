@@ -1,0 +1,1 @@
+import{u as e}from"./isTypedArray-V6sIBVz1.js";var t=e;function a(r){return r==null?"":t(r)}var s=a,E=(r=>(r.CREATE="create",r.VIEW="view",r.READ="read",r.EDIT="edit",r.UPDATE="update",r.DELETE="delete",r))(E||{});export{E as A,s as t};
