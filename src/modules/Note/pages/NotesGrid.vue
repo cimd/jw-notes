@@ -4,8 +4,6 @@
       <my-create-button tooltip='Create Note' @click='$router.push({ name: "NotePage"})' />
       <q-separator dark inset vertical />
       <my-clear-filters-button grid-id='NotesGrid' />
-      <q-separator dark inset vertical />
-      <my-export-button grid-id='NotesGrid' />
       <q-space />
       <my-grid-column-chooser grid-id='NotesGrid' />
       <my-grid-search grid-id='NotesGrid' />
@@ -24,7 +22,7 @@
               clipMode='EllipsisWithTooltip'
               :dataSource='notes.data'
               :editSettings='editSettings'
-              :enablePersistence='true'
+              :enablePersistence='false'
               :filterSettings='filterSettings'
               :height='height'
               :pageSettings='pageSettings'
@@ -50,6 +48,7 @@
                   format='dd/MM/yy'
                   headerText='Created At'
                   type='date'
+                  :visible='false'
                   width='100' />
         <e-column field='updated_at'
                   format='dd/MM/yy'
@@ -86,8 +85,7 @@ export default defineComponent({
     },
   },
   created() {
-    console.log(this.$config)
-    this.notes.where({ user_id: this.$config.user.id }).get()
+    this.notes.get()
   },
   mounted() {
     this.notes.$grid.init()

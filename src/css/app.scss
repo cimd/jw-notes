@@ -1,1 +1,156 @@
-// app global css in SCSS form
+// app global css in Sass form
+
+@font-face {
+  font-family: "ClanOT";
+  src: url("../assets/fonts/ClanOT-News.eot");
+  src: local("ClanOT-News"),
+  url("../assets/fonts/ClanOT-News.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/ClanOT-News.woff2") format("woff2"),
+  url("../assets/fonts/ClanOT-News.woff") format("woff"),
+  url("../assets/fonts/ClanOT-News.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClanOT";
+  src: url("../assets/fonts/ClanOT-Thin.eot");
+  src: local("ClanOT-Thin"),
+  url("../assets/fonts/ClanOT-Thin.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/ClanOT-Thin.woff2") format("woff2"),
+  url("../assets/fonts/ClanOT-Thin.woff") format("woff"),
+  url("../assets/fonts/ClanOT-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClanOT";
+  src: url("../assets/fonts/ClanOT-Medium.eot");
+  src: local("ClanOT-Medium"),
+  url("../assets/fonts/ClanOT-Medium.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/ClanOT-Medium.woff2") format("woff2"),
+  url("../assets/fonts/ClanOT-Medium.woff") format("woff"),
+  url("../assets/fonts/ClanOT-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "ClanOT", serif !important;
+}
+
+@import '@syncfusion/ej2-base/styles/material.css';
+@import '@syncfusion/ej2-inputs/styles/material.css';
+@import '@syncfusion/ej2-buttons/styles/material.css';
+@import '@syncfusion/ej2-dropdowns/styles/material.css';
+@import "@syncfusion/ej2-lists/styles/material.css";
+@import '@syncfusion/ej2-popups/styles/material.css';
+@import '@syncfusion/ej2-navigations/styles/material.css';
+@import '@syncfusion/ej2-splitbuttons/styles/material.css';
+
+@import "@syncfusion/ej2-vue-grids/styles/material.css";
+
+.modal-section {
+  background-color: #00a3e0;
+  color: white;
+  font-size: 1.2em;
+  line-height: 2.5;
+  margin-top: 20px;
+  text-indent: 50px;
+}
+
+.header-color {
+  color: $sps-grey-700;
+}
+
+.sub-header-color {
+  color: #3a6ea5;
+}
+
+.toolbar {
+  background-color: #f3f3f3;
+}
+
+.toolbar-button {
+  font-weight: 400;
+  //padding: 8px 8px;
+  width: 6em;
+  height: 4em;
+  //Outline
+  //background: transparent !important;
+  //box-shadow: none;
+  //opacity: 0.2;
+  //color: $primary;
+}
+
+.toolbar-button-dropdown {
+  font-weight: 400;
+  //padding: 8px 8px;
+  height: 4em;
+  //width: 6em;
+  //Outline
+  //background: transparent !important;
+  //box-shadow: none;
+  //opacity: 0.2;
+  //color: $primary;
+}
+
+.grid-action-button {
+  background-color: white;
+  color: $primary;
+  border-color: transparent;
+}
+
+.grid-action-button:hover {
+  background-color: $sps-primary-100;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 600px) {
+  .low-res-adjustment {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    margin-bottom: 50px;
+  }
+}
+
+// for ipad screens
+@media screen and (max-width: 820px) {
+  .action-footer {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    border-top: 1px solid lightgrey;
+    background-color: white;
+    margin-left: -15px;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 821px) {
+  .action-footer {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    width: calc(100% - 85px);
+    border-top: 1px solid lightgrey;
+    background-color: white;
+    margin-left: -15px;
+    z-index: 100;
+  }
+}
+
+div:has(.column-chooser-q-list) {
+  max-height: 650px !important;
+}
+
+.form-section-label {
+  font-size: 1em;
+  font-weight: 500;
+  color: $sps-grey-700;
+  margin: 10px 10px 1px 20px;
+}

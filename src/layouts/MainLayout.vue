@@ -13,7 +13,7 @@
           JW Notes
         </q-toolbar-title>
 
-        <div>v{{ $q.version }}</div>
+        <div></div>
       </q-toolbar>
     </q-header>
 

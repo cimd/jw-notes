@@ -5,8 +5,6 @@ import { Auth, createHttp } from '@konnec/vue-eloquent'
  * Create an instance of the auth service
  */
 const auth = new Auth()
-
-console.log(import.meta.env.VITE_API)
 /**
  * Create an instance of the HTTP service.
  */

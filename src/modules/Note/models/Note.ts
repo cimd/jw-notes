@@ -18,6 +18,7 @@ export default class Note extends Model<INote> {
     keywords: [],
     notes: undefined
   })
+  $editor = null as any
 
   constructor(note?: INote){
     super()
@@ -32,4 +33,9 @@ export default class Note extends Model<INote> {
       notes: { required },
     }
   }))
+
+  saving()
+  {
+    this.model.notes = this.$editor.getXhtml()
+  }
 }

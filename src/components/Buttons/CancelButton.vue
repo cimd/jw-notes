@@ -7,11 +7,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'MyCancelButton',
   props: {
     label: {
       required: false,
-      default: 'Cancel',
+      default: 'Close',
       type: String
     }
   },
