@@ -44,6 +44,7 @@ module.exports = configure(function (/* ctx */) {
       'quasar-overrides.scss',
       'syncfusion.material.min.css',
       'grid.scss',
+      'richtexteditor.scss'
     ],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
