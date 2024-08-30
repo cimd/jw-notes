@@ -6,6 +6,9 @@ export const useNoteStore = defineStore('Note', {
       'Life and Ministry',
       'Watchtower Study',
       'Personal Study',
+      'Family Worship',
+      'Convention',
+      'Assembly',
     ],
   }),
   actions: {

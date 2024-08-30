@@ -3,14 +3,14 @@
 
     <q-form @submit='onSubmit'>
       <div class='row'>
-        <div class='col-3 q-ma-md'>
+        <div class='col-sm-6 col-md-3 q-ma-md'>
           <my-select v-model:value='note.model.type'
                      :error='note.$model.type.$error'
                      label='Type'
                      :map-options='false'
                      :options='types' />
         </div>
-        <div class='col-2 q-ma-md'>
+        <div class='col-sm-6 col-md-3 q-ma-md'>
           <my-date v-model:value='note.model.meeting_at'
                    :error='note.$model.meeting_at.$error'
                    label='Date' />
@@ -18,7 +18,7 @@
 
       </div>
       <div class='row'>
-        <div class='col q-ma-md'>
+        <div class='col-sm-12 col-md-6 q-ma-md'>
           <my-multi-input v-model:value='note.model.keywords'
                           label='Keywords' />
         </div>
@@ -37,6 +37,7 @@
       </div>
 
       <my-action-footer>
+        <my-delete-button @delete-confirmed='onDeleteConfirmed' />
         <q-space />
         <my-cancel-button class='q-mr-md' @click="$router.push({name:'NotesGrid'})" />
         <my-save-button :loading='note.state.isLoading' type='submit' />
@@ -107,6 +108,11 @@ export default defineComponent({
       this.note.save().then(() => {
       })
     },
+    onDeleteConfirmed() {
+      this.note.delete().then(() => {
+        this.$router.push({ name: 'NotesGrid' })
+      })
+    }
   },
 })
 </script>
