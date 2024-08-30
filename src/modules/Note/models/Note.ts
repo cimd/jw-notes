@@ -1,4 +1,4 @@
-import { Model } from '@konnec/vue-eloquent'
+import { Model, Policy } from '@konnec/vue-eloquent'
 import { required } from '@vuelidate/validators'
 import { computed, reactive } from 'vue'
 import { INote } from 'modules/Note/models/NoteInterface'
@@ -19,11 +19,17 @@ export default class Note extends Model<INote> {
     notes: undefined
   })
   $editor = null as any
+  $acl: Policy
 
   constructor(note?: INote){
     super()
     this.factory(note)
     super.initValidations()
+    this.$acl = new Policy({
+      create: true,
+      read: true,
+      update: true,
+    })
   }
 
   protected validations = computed(() => ({

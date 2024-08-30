@@ -2,6 +2,7 @@ import { RouteRecordRaw } from 'vue-router'
 import authRoutes from 'modules/Auth/routes/auth'
 import userRoutes from 'modules/Auth/routes/user'
 import noteRoutes from 'modules/Note/routes/note'
+import jwRoutes from 'modules/Jw/routes/jw'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -14,7 +15,8 @@ const routes: RouteRecordRaw[] = [
           requiresAuth: true,
         }
       },
-      ...noteRoutes
+      ...noteRoutes,
+      ...jwRoutes
     ],
   },
   {

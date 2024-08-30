@@ -54,6 +54,11 @@ const linksList = [
     icon: 'sym_o_note',
     link: '/notes/grid'
   },
+  {
+    title: 'JW',
+    icon: 'sym_o_content_copy',
+    link: '/jw'
+  },
 ]
 
 export default defineComponent({

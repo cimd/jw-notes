@@ -83,6 +83,7 @@ export default defineComponent({
       insertImageSettings: {
         saveFormat: 'Base64'
       },
+      timerId: 0
     }
   },
   computed: {
@@ -94,11 +95,22 @@ export default defineComponent({
   created() {
     if (this.noteId) {
       this.note.refresh(this.noteId)
+      this.note.$acl.updating()
     }
     this.note.initValidations()
   },
   mounted() {
     this.note.$editor = this.$refs.editor
+    if (this.note.$acl.isUpdating()) {
+      console.log('Is Updating...')
+      this.timerId = setInterval(() => {
+        console.log('Saving...')
+        this.note.save()
+      }, 1000 * 30)
+    }
+  },
+  beforeUnmount() {
+    clearInterval(this.timerId)
   },
   methods: {
     onSubmit() {
