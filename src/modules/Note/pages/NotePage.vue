@@ -115,6 +115,7 @@ export default defineComponent({
   methods: {
     onSubmit() {
       this.note.$validate()
+      console.log(this.note.$model)
       if (this.note.$invalid) return
 
       this.note.save().then(() => {

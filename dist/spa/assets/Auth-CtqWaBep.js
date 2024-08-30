@@ -1,0 +1,1 @@
+import{a6 as e}from"./index-BtKb8wT8.js";const d=e("Auth",{state:()=>({user:{id:void 0,created_at:void 0,updated_at:void 0,deleted_at:void 0,name:void 0,email:void 0,password:void 0}}),actions:{},getters:{},persist:!0});export{d as u};

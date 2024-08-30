@@ -1,0 +1,1 @@
+import{b as m}from"./index-BtKb8wT8.js";import{auth as i}from"./apis-CjmXX0Bf.js";import"./isTypedArray-3TB5rZnQ.js";import"./http-CAOryOOa.js";const p=m(({router:a})=>{a.beforeEach((t,r,e)=>{t.matched.some(o=>o.meta.requiresAuth)?i.isAuthenticated()?e():e({path:"/auth/login"}):t.name==="login"&&i.isAuthenticated()?e({path:"/"}):e()})});export{p as default};

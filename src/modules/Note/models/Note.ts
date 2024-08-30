@@ -36,7 +36,6 @@ export default class Note extends Model<INote> {
     model: {
       type: { required },
       meeting_at: { required },
-      notes: { required },
     }
   }))
 
