@@ -28,7 +28,7 @@ export default defineComponent({
   methods: {
     fetchWatchtower() {
       JwApi.watchtower().then(response => {
-        this.htmlContent = response.data
+        this.htmlContent = response.data.article
       })
     }
   },
